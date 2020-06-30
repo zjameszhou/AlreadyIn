@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:edit, :update, :show, :destory]
 
   # GET /projects
   # GET /projects.json
@@ -11,7 +11,6 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    
   end
 
   # GET /projects/new
@@ -75,5 +74,7 @@ class ProjectsController < ApplicationController
       params.require(:project).permit(:title, :address, :description, :user_id)
     end
 
-
+    def set_user
+      @user = User.find(Project.find(params[:id]).user_id)
+    end
 end

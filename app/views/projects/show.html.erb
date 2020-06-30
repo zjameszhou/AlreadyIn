@@ -17,7 +17,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= User.find(1).first_name %>
+  <%= @user.first_name %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
