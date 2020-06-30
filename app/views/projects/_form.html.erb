@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field input-field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="field input-field">
     <%= form.label :address %>
     <%= form.text_field :address %>
   </div>
 
-  <div class="field">
+  <div class="field input-field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "materialize-textarea" %>
   </div>
 
   
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions ">
+    <%= form.submit "Add Project", class: "btn waves-effect waves-light" %>
   </div>
 <% end %>
