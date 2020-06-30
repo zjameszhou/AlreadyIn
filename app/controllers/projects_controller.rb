@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :show, :destory]
 
   # GET /projects
   # GET /projects.json
@@ -25,6 +26,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.user_id = current_user.id
 
     respond_to do |format|
       if @project.save
@@ -69,6 +71,10 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :address, :description)
+      params.require(:project).permit(:title, :address, :description, :user_id)
+    end
+
+    def set_user
+      @user = User.find(Project.find(params[:id]).user_id)
     end
 end
