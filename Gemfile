@@ -53,3 +53,4 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 
 gem 'materialize-sass'
 gem 'jquery-rails'
+gem 'sendgrid-ruby'
