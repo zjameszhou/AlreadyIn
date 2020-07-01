@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<h3><%= @project.title %></h3>
 
+<br>
+<h5>Start</h5>
+<form action="#">
+  <p class="range-field">
+    <input type="range" id="test5" min="0" max="100" />
+  </p>
+</form>
+<br>
 <p>
   <strong>Address:</strong>
   <%= @project.address %>
@@ -26,6 +31,6 @@
 <p>
   <strong>Milestones:</strong>
   <% @project.milestones.each do |m| %>
-    <p>Name: <%= m.name %> - Description: <%= m.description %></p>
+    <p>Name: <%= m.name %> - Description<%= m.description %></p>
   <% end %>
 </p>
