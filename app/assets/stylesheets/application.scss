@@ -14,8 +14,12 @@
  *= require_self
  */
 
- @import "https://fonts.googleapis.com/icon?family=Material+Icons";
  @import "materialize/components/color-variables";
-  $primary-color: color("red", "darken-4") !default;
-  $secondary-color: color("blue", "darken-1") !default;
-  @import 'materialize';
+ @import "materialize/components/_variables";
+ $primary-color: color("red", "darken-3") !default;
+ $secondary-color: color("teal", "darken-3") !default;
+ @import 'materialize';
+
+ h3 {
+   padding-bottom: 20px;
+ }

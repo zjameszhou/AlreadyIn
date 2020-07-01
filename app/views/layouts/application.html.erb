@@ -2,18 +2,20 @@
 <html>
 
 <head>
-  <title>AlreadyIn</title>
+  <title>alreadyin</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
+  <nav class="red darken-3">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">AlreadyIn</a>
+      <a id="logo-container" href="../" class="brand-logo">alreadyin<span class="material-icons">home</span></a>
+      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to  "Home", root_path %></li>
         <li><%= link_to  "About", about_path %></li>
