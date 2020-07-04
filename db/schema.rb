@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_07_04_220547) do
   end
 
   create_table "project_users", force: :cascade do |t|
-    t.integer "role"
+    t.integer "role", default: 0
     t.bigint "user_id", null: false
     t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
