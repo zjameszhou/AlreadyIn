@@ -16,4 +16,3 @@ ActionMailer::Base.smtp_settings = {
 }
 
 
-config.action_mailer.default_url_options = { :host => 'jz-alreadyin.herokuapp.com' }
