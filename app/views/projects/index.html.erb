@@ -2,6 +2,8 @@
 
 <h3>Projects</h3>
 
+<h4>List View</h4>
+
 <table>
   <thead>
     <tr>
@@ -34,3 +36,26 @@
 
 <br>
 
+<h4>Card View</h4>
+<div class="row">
+<% @projects.each do |project| %>
+
+  <div class="col s12 m3">
+    <div class="card ">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://picsum.photos/200/200.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= project.title %><i
+            class="material-icons right">more_vert</i></span>
+        <p><%= link_to 'Project Page', project %></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Project Description<i class="material-icons right">close</i></span>
+        <p><%= project.description %></p>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+  </div>

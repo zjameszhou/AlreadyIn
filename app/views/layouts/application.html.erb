@@ -15,7 +15,7 @@
   <nav class="red darken-3">
     <div class="nav-wrapper container">
       <a id="logo-container" href="../" class="brand-logo">alreadyin<span class="material-icons">home</span></a>
-      
+
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to  "Home", root_path %></li>
         <li><%= link_to  "About", about_path %></li>
@@ -26,25 +26,30 @@
         <li><%= link_to 'Profile',profile_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
-        
+
         <li><%= link_to "Login", new_user_session_path %></li>
         <li><%= link_to "Register", new_user_registration_path %></li>
-        
+
         <% end %>
       </ul>
     </div>
   </nav>
   <div class="container">
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
-  <%= yield %>
+    <%= yield %>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+  <script>
+    M.AutoInit();
+  </script>
 </body>
+
 
 </html>

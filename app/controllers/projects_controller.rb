@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :add_memeber]
   before_action :set_user, only: [:edit, :update, :show, :destory]
 
   # GET /projects
@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+  end
+
+  def add_memeber
+    
   end
 
   # POST /projects
