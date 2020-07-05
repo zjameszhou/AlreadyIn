@@ -37,6 +37,8 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
+
+    User.find(current_user.id).projects << @project
   end
 
   # PATCH/PUT /projects/1
@@ -77,4 +79,5 @@ class ProjectsController < ApplicationController
     def set_user
       @user = User.find(Project.find(params[:id]).user_id)
     end
+
 end
