@@ -16,8 +16,8 @@
 
  @import "materialize/components/color-variables";
  @import "materialize/components/_variables";
- $primary-color: color("red", "darken-3") !default;
- $secondary-color: color("teal", "darken-3") !default;
+ $primary-color: color("black", "darken-3") !default;
+ $secondary-color: color("blue", "darken-3") !default;
  @import 'materialize';
 
  h3 {
