@@ -170,7 +170,7 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    sendgrid-ruby (6.3.1)
+    sendgrid-ruby (6.3.2)
       ruby_http_client (~> 3.4)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -220,14 +220,14 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.2)
   jbuilder (~> 2.7)
-  jquery-rails
-  materialize-sass
+  jquery-rails (~> 4.4)
+  materialize-sass (~> 1.0)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
   selenium-webdriver
-  sendgrid-ruby
+  sendgrid-ruby (~> 6.3, >= 6.3.2)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
