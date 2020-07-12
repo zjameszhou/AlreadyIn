@@ -1,0 +1,20 @@
+<div class="section">
+  <h3>Add a milestone</h3>
+  <%= form_for([@project, @project.milestones.build]) do |m| %>
+    <div class="field input-field">
+      <%= m.label :name %>
+      <%= m.text_field :name %>
+    </div>
+    <div class="field input-field">
+      <%= m.label :description %>
+      <%= m.text_field :description %>
+    </div>
+    <div class="field input-field">
+      <%= m.label :deadline %>
+      <%= m.text_field :deadline, class: "datepicker" %>
+    </div>
+    <div class="actions ">
+      <%= m.submit "Add Milestone", class: "btn waves-effect waves-light" %>
+    </div>
+  <% end %>
+</div>
