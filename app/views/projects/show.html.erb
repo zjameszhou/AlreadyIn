@@ -28,9 +28,5 @@
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
 
-<p>
-  <strong>Milestones:</strong>
-  <% @project.milestones.each do |m| %>
-    <p>Name: <%= m.name %> - Description<%= m.description %></p>
-  <% end %>
-</p>
+<%= render 'milestones/milestone_add' %>
+<%= render 'milestones/milestone_list' %>
