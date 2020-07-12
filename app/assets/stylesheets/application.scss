@@ -15,12 +15,12 @@
  */
 
  @import "materialize/components/color-variables";
- @import "materialize/components/_variables";
- $primary-color: color("black", "darken-3") !default;
- $secondary-color: color("blue", "darken-3") !default;
+ $primary-color: #000000 !default;
+ $secondary-color: #0369ff !default;
  @import 'materialize';
 
  h3 {
    padding-bottom: 20px;
  }
 
+ 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>alreadyin</title>
+  <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -12,28 +12,7 @@
 </head>
 
 <body>
-  <nav class="black">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="../" class="brand-logo">alreadyin<span class="material-icons">home</span></a>
-
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to  "Home", root_path %></li>
-        <li><%= link_to  "About", about_path %></li>
-        <li><%= link_to  "Projects", projects_path %></li>
-        <li><%= link_to  "Contact", contact_path %></li>
-
-        <% if current_user %>
-        <li><%= link_to 'Profile',profile_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-
-        <li><%= link_to "Login", new_user_session_path %></li>
-        <li><%= link_to "Register", new_user_registration_path %></li>
-
-        <% end %>
-      </ul>
-    </div>
-  </nav>
+  <%= render 'layouts/nav' %>
   <div class="container">
     <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
@@ -51,5 +30,6 @@
   </script>
 </body>
 
+<%= render 'layouts/footer' %>
 
 </html>
