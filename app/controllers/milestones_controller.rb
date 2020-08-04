@@ -4,6 +4,7 @@ class MilestonesController < ApplicationController
 
 
   def show
+    commontator_thread_show(@milestone)
   end
 
   def new

@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable #, :confirmable
   has_many :project_users
   has_many :projects, through: :project_users
+  acts_as_commontator
 end

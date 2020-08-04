@@ -51,6 +51,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'materialize-sass', '~> 1.0'
-gem 'jquery-rails', '~> 4.4'
 gem 'sendgrid-ruby', '~> 6.3', '>= 6.3.2'
+gem 'redis', '~> 4.2', '>= 4.2.1'
+gem 'commontator'
