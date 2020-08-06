@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   get 'profile', to: 'users#show'
   get 'about', to: 'pages#about'
+  get 'howitworks', to: 'pages#howitworks'
   get 'contact', to: 'pages#contact'
   root to: 'pages#home'
   
