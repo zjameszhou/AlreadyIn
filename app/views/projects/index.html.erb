@@ -4,14 +4,14 @@
 
 <h4>List View</h4>
 
-<table>
+<table class="striped">
   <thead>
     <tr>
       <th>Title</th>
       <th>Address</th>
       <th>Description</th>
       <th>Owner</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -22,9 +22,10 @@
       <td><%= project.address %></td>
       <td><%= project.description %></td>
       <td><%= User.find(project.user_id).first_name %></td>
-      <td><%= link_to 'Show', project %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>
+      <%= link_to 'Show', project %> <span> | </span>
+      <%= link_to 'Edit', edit_project_path(project) %> <span> | </span>
+      <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
