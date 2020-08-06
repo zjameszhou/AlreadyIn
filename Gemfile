@@ -58,3 +58,5 @@ gem 'materialize-sass', '~> 1.0'
 gem 'sendgrid-ruby', '~> 6.3', '>= 6.3.2'
 gem 'redis', '~> 4.2', '>= 4.2.1'
 gem 'commontator'
+gem "aws-sdk-s3", require: false
+
