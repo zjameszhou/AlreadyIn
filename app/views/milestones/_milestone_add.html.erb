@@ -13,6 +13,14 @@
       <%= m.label :deadline %>
       <%= m.text_field :deadline, class: "datepicker" %>
     </div>
+
+    <div class="field input-field">
+
+      <div class="file-path-wrapper">
+        <%= m.file_field :attachment %>
+      </div>
+    </div>
+    
     <div class="actions ">
       <%= m.submit "Add Milestone", class: "btn waves-effect waves-light" %>
     </div>

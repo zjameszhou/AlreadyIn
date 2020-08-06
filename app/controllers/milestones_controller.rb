@@ -23,7 +23,7 @@ class MilestonesController < ApplicationController
   def update
     respond_to do |format|
       if @milestone.update(milestone_params)
-        format.html { redirect_to @milestone, notice: 'Milestone was successfully updated.' }
+        format.html { redirect_to project_path(@project), notice: 'Milestone was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -52,7 +52,7 @@ class MilestonesController < ApplicationController
 
 
     def milestone_params
-      params.require(:milestone).permit(:name, :description, :deadline, :status, :project_id)
+      params.require(:milestone).permit(:name, :description, :deadline, :status, :project_id, :attachment)
     end
 
 
