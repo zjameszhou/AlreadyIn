@@ -11,25 +11,25 @@
 
       </tr>
     </thead>
-
     <tbody>
-      <% @project.milestones.each do |milestone| %>
-      <tr>
-      <td><%= milestone.id %></td>
-        <td><%= milestone.name %></td>
-        <td><%= milestone.deadline %></td>
-        <td>
-          <label><input type="checkbox" />
-          <span></span>
-          </label>
-        </td>
-        <td>
-          <%= link_to (content_tag(:i, nil, class: 'fas fa-folder-open')), [milestone.project, milestone] %> |
-          <%= link_to (content_tag(:i, nil, class: 'fas fa-trash-alt')), [milestone.project, milestone], method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-
-      </tr>
+      <% @milestones.each do |milestone| %>
+        <% if milestone.id.present? %>
+          <tr>
+            <td><%= milestone.id %></td>
+            <td><%= milestone.name %></td>
+            <td><%= milestone.deadline %></td>
+            <td>
+              <label><input type="checkbox" />
+                <span></span>
+              </label>
+            </td>
+            <td>
+              <%= link_to (content_tag(:i, nil, class: 'fas fa-folder-open')), [milestone.project, milestone] %> |
+              <%= link_to (content_tag(:i, nil, class: 'fas fa-trash-alt')), [milestone.project, milestone], method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>
-<div>
+  <div>
