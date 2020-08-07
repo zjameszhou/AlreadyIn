@@ -3,6 +3,9 @@ class MilestonesController < ApplicationController
   before_action :set_milestone, only: [:show, :edit, :update, :destroy]
 
 
+  def index
+  end 
+  
   def show
     commontator_thread_show(@milestone)
   end
