@@ -1,5 +1,6 @@
 <h2>Resend unlock instructions</h2>
-
+<hr>
+<div>
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -14,3 +15,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>

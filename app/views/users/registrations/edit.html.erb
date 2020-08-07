@@ -1,5 +1,6 @@
 <h2>Edit <%= resource_name.to_s.humanize %> Password</h2>
-
+<hr>
+<div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -53,3 +54,4 @@
 <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "waves-effect waves-light" %>
 <br>
 <%= link_to "Back", :back %>
+</div>
