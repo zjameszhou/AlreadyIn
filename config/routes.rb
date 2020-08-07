@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'howitworks', to: 'pages#howitworks'
   get 'contact', to: 'pages#contact'
+  get 'privacypolicy', to: 'pages#privacypolicy'
+  get 'cookiepolicy', to: 'pages#cookiepolicy'
   root to: 'pages#home'
   
 end
