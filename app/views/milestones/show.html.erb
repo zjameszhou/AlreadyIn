@@ -1,38 +1,35 @@
-<p id="notice"><%= notice %></p>
-
-<h2><%= @milestone.name %></h2>
-<hr>
-
-<p>
-  <strong>Description:</strong>
-  <%= @milestone.description %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @milestone.deadline %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @milestone.status %>
-</p>
-
-<p>
-  <strong>Project:</strong>
-  <%= @milestone.project_id %>
-</p>
-
-<p>
-  <strong>Shared File:</strong>
-  <% if @milestone.attachment.attached? %>
-  <%= link_to @milestone.attachment.filename, rails_blob_path(@milestone.attachment, disposition: "attachment") %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_project_milestone_path(@project, @milestone) %> |
-<%= link_to 'Back', project_path(@project) %>
-<hr>
-<div>
-  <%= commontator_thread(@milestone) %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h2><%= @milestone.name %></h2>
+  <hr>
+  <p>
+    <strong>Description:</strong>
+    <%= @milestone.description %>
+  </p>
+  <p>
+    <strong>Deadline:</strong>
+    <%= @milestone.deadline %>
+  </p>
+  <p>
+    <strong>Status:</strong>
+    <%= @milestone.status %>
+  </p>
+  <p>
+    <strong>Project:</strong>
+    <%= @milestone.project_id %>
+  </p>
+  <p>
+    <strong>Shared File:</strong>
+    <% if @milestone.attachment.attached? %>
+    <%= link_to @milestone.attachment.filename, rails_blob_path(@milestone.attachment, disposition: "attachment") %>
+    <% end %>
+  </p>
+  <%= link_to 'Edit', edit_project_milestone_path(@project, @milestone) %> |
+  <%= link_to 'Back', project_path(@project) %>
+  <br>
+  <br>
+  
+  <div>
+    <%= commontator_thread(@milestone) %>
+  </div>
 </div>

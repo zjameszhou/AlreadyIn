@@ -1,32 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<h3><%= @project.title %></h3>
-<hr>
-
-
-<h5>Start</h5>
-<form action="#">
-  <p class="range-field">
-    <input type="range" id="test5" min="0" max="100" />
-  </p>
-</form>
-<blockquote>
-  <p>
-    <strong>Address:</strong>
-    <%= @project.address %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= @project.description %>
-  </p>
-  <p>
-    <strong>Owner:</strong>
-    <%= @user.first_name %>
-  </p>
-
-</blockquote>
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-
-<%= render 'milestones/milestone_add' %>
-<%= render 'milestones/milestone_list' %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h3><%= @project.title %></h3>
+  <hr>
+  <h5>Start</h5>
+  <form action="#">
+    <p class="range-field">
+      <input type="range" id="test5" min="0" max="100" />
+    </p>
+  </form>
+  <blockquote>
+    <p>
+      <strong>Address:</strong>
+      <%= @project.address %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @project.description %>
+    </p>
+    <p>
+      <strong>Owner:</strong>
+      <%= @user.first_name %>
+    </p>
+  </blockquote>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
+  <%= render 'milestones/milestone_add' %>
+  <%= render 'milestones/milestone_list' %>
+</div>

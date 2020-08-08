@@ -1,28 +1,30 @@
-<h2>Profile - <%= @user.first_name %> <%= @user.last_name %></h2>
-<hr>
+<div class="container">
+  <h2>Profile - <%= @user.first_name %> <%= @user.last_name %></h2>
+  <hr>
 
-<div>
-  <%= link_to 'Edit Profile',edit_user_registration_path, class: "btn waves-effect waves-light" %>
+  <div>
+    <%= link_to 'Edit Profile',edit_user_registration_path, class: "btn waves-effect waves-light" %>
 
-  <h4>User Projects:</h4>
-  <table class="striped table-section">
-    <thead>
-      <th>Title</th>
-      <th>Address</th>
-      <th>Created at</th>
-      <th>Action</th>
+    <h4>User Projects:</h4>
+    <table class="striped table-section">
+      <thead>
+        <th>Title</th>
+        <th>Address</th>
+        <th>Created at</th>
+        <th>Action</th>
 
-      <th colspan="4"></th>
-    </thead>
-    <tbody>
-      <% @user.projects.each do |project| %>
-      <tr>
-        <td><%=project.title %></td>
-        <td><%=project.address %></td>
-        <td><%=project.created_at.to_date %></td>
-        <td><%= link_to 'Open', project %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+        <th colspan="4"></th>
+      </thead>
+      <tbody>
+        <% @user.projects.each do |project| %>
+        <tr>
+          <td><%=project.title %></td>
+          <td><%=project.address %></td>
+          <td><%=project.created_at.to_date %></td>
+          <td><%= link_to 'Open', project %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
