@@ -9,22 +9,26 @@
         <th>Name</th>
         <th>Deadline</th>
         <th>Status</th>
-        <th colspan="3">Action</th>
+        <th colspan="4">Action</th>
 
       </tr>
     </thead>
     <tbody>
-      <% @milestones.each do |milestone| %>
+      <% @milestones.each_with_index do |milestone, index| %>
         <% if milestone.id.present? %>
           <tr>
-            <td><%= milestone.id %></td>
+            <td><%= index + 1 %></td>
             <td><%= milestone.name %></td>
             <td><%= milestone.deadline %></td>
+            <td><%= link_to milestone.status, toggle_status_project_milestone_path(milestone.project, milestone) %></td>
+
+            <!--
             <td>
               <label><input type="checkbox" />
                 <span></span>
               </label>
             </td>
+            -->
             <td>
               <%= link_to (content_tag(:i, nil, class: 'fas fa-folder-open')), [milestone.project, milestone] %> |
               <%= link_to (content_tag(:i, nil, class: 'fas fa-trash-alt')), [milestone.project, milestone], method: :delete, data: { confirm: 'Are you sure?' } %>
