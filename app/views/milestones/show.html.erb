@@ -1,35 +1,25 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <h2><%= @milestone.name %></h2>
-  <hr>
+  <hr><br><br>
+  <blockquote>
+  <p><strong>Description: </strong><%= @milestone.description %></p>
+  <p><strong>Deadline: </strong><%= @milestone.deadline %></p>
+  <p><strong>Status: </strong><%= @milestone.status %></p>
+  <p><strong>Project: </strong><%= @milestone.project_id %></p>
   <p>
-    <strong>Description:</strong>
-    <%= @milestone.description %>
-  </p>
-  <p>
-    <strong>Deadline:</strong>
-    <%= @milestone.deadline %>
-  </p>
-  <p>
-    <strong>Status:</strong>
-    <%= @milestone.status %>
-  </p>
-  <p>
-    <strong>Project:</strong>
-    <%= @milestone.project_id %>
-  </p>
-  <p>
-    <strong>Shared File:</strong>
+    <strong>Shared File: </strong>
     <% if @milestone.attachment.attached? %>
     <%= link_to @milestone.attachment.filename, rails_blob_path(@milestone.attachment, disposition: "attachment") %>
     <% end %>
   </p>
+  </blockquote>
   <%= link_to 'Edit', edit_project_milestone_path(@project, @milestone) %> |
   <%= link_to 'Back', project_path(@project) %>
-  <br>
-  <br>
-  
+  <br><br>
+<hr>
   <div>
     <%= commontator_thread(@milestone) %>
   </div>
 </div>
+<br>

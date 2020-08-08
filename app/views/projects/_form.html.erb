@@ -26,7 +26,15 @@
     <%= form.text_area :description, class: "materialize-textarea" %>
   </div>
 
-  
+
+      <label>Choose Project Template</label>
+    <select class="browser-default">
+      <option value="" disabled selected>Choose your Template</option>
+      <option value="1">Buyer Template</option>
+      <option value="2">Seller Template</option>
+      <option value="3">Agent Template</option>
+    </select>
+ <br>
   <div class="actions ">
     <%= form.submit "Add Project", class: "btn waves-effect waves-light" %>
   </div>
