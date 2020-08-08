@@ -6,11 +6,22 @@
     <p><strong>Address: </strong><%=@project.address %></p>
     <p><strong>Description: </strong><%=@project.description %></p>
     <p><strong>Created by: </strong><%=@user.first_name %></p>
-    <p><strong>Progress: </strong></p>
+    <% i = @project.milestones.Completed.count.to_f %>
+    <% if @project.milestones.count == 0 %>
+    <% total = 1%>
+    <% else %>
+    <% total = @project.milestones.count %>
+    <p><strong>Progress: <%=  number_to_percentage(i / total * 100, precision: nil)  %></strong></p>
+
   </blockquote>
   <form action="#">
-    <p class="range-field"><input type="range" id="test5" min="0" max="100" /></p>
-  </form><br><br><%=link_to 'Edit',
-edit_project_path(@project) %>| <%=link_to 'Back',
-projects_path %><%=render 'milestones/milestone_list'%><div><%=render 'milestones/milestone_add'%></div>
+    <p class="range-field"><input type="range" class="active" id="test5" min="0" max="100" value="<%= i / total * 100 %>"/></p>
+  </form><br><br>
+      <% end %>
+  <%=link_to 'Edit',edit_project_path(@project) %>| 
+  <%=link_to 'Back',projects_path %>
+  <%=render 'milestones/milestone_list'%><div>
+  <%=render 'milestones/milestone_add'%></div>
 </div>
+
+

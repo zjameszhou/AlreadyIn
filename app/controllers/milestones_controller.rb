@@ -51,6 +51,9 @@ class MilestonesController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def progess
+  end
+
   private
   
     def set_project

@@ -60,3 +60,4 @@ gem 'redis', '~> 4.2', '>= 4.2.1'
 gem 'commontator'
 gem "aws-sdk-s3", require: false
 
+
