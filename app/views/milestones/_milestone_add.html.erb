@@ -1,6 +1,5 @@
-<div class="welcome-section">
+<div class="welcome-section z-depth-3">
   <h3>Add a milestone</h3>
-  <hr>
   <%= form_for([@project, @project.milestones.build]) do |m| %>
     <div class="field input-field">
       <%= m.label :name %>
