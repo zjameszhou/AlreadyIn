@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   
 
   resources :projects do
-    resources :milestones
+    resources :milestones do
+        get 'toggle_status', :on => :member
+    end
   end
   
   mount Commontator::Engine => '/commontator'

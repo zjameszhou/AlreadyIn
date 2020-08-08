@@ -24,7 +24,6 @@ class ProjectsController < ApplicationController
   end
 
   def add_memeber
-    
   end
 
   # POST /projects

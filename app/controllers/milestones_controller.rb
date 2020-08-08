@@ -1,6 +1,6 @@
 class MilestonesController < ApplicationController
-  before_action :set_project, only: [:index, :show, :update, :destory, :create]
-  before_action :set_milestone, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:index, :show, :update, :destory, :create, :toggle_status]
+  before_action :set_milestone, only: [:show, :edit, :update, :destroy, :toggle_status]
 
 
   def index
@@ -40,6 +40,18 @@ class MilestonesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to project_path(@project), notice: 'Milestone was successfully destroyed.' }
      end
+  end
+
+  def toggle_status
+    if @milestone.Pending?
+      @milestone.Completed! 
+    elsif @milestone.Completed?
+      @milestone.Pending!
+    end
+    redirect_to project_path(@project)
+  end
+
+  def progess
   end
 
   private

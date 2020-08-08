@@ -12,18 +12,20 @@
     <h4>Manage project</h4>
     <br>
     <%= link_to 'Add New Project', new_project_path, class: "btn waves-effect waves-light"%>
-    <br>
+
     <table class="striped table-section">
       <thead>
-        <th>Project Title</th>
+        <th>ID</th>
+        <th>Title</th>
         <th>Description</th>
         <th>Created at</th>
         <th>Action</th>
         <th colspan="4"></th>
       </thead>
       <tbody>
-        <% @user.projects.each do |project| %>
+        <% @user.projects.each_with_index do |project, index| %>
         <tr>
+        <td><%= index + 1 %></td>
           <td><%=project.title %></td>
           <td><%=project.description %></td>
           <td><%=project.created_at.to_date %></td>
