@@ -7,8 +7,8 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Deadline</th>
-        <th>Status</th>
+        <th id="mobile-hide">Deadline</th>
+        <th id="mobile-hide">Status</th>
         <th colspan="4">Action</th>
 
       </tr>
@@ -19,8 +19,8 @@
           <tr>
             <td><%= index + 1 %></td>
             <td><%= milestone.name %></td>
-            <td><%= milestone.deadline %></td>
-            <td><%= link_to milestone.status, toggle_status_project_milestone_path(milestone.project, milestone) %></td>
+            <td id="mobile-hide"><%= milestone.deadline %></td>
+            <td id="mobile-hide"><%= link_to milestone.status, toggle_status_project_milestone_path(milestone.project, milestone) %></td>
 
             <!--
             <td>
