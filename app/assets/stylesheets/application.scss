@@ -20,6 +20,8 @@
  $secondary-color: #009688 !default;
  @import 'materialize';
 
+
+ 
  h1, h2, h3 {
   text-transform: uppercase;
   padding: 10px;
@@ -173,11 +175,8 @@ nav ul a:hover {
   font-size: inherit;
 }
 
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  #mobile-hide { display: block; }  /* show it on small screens */
-}
 
-@media screen and (min-width: 401px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 800px) {
   #mobile-hide { display: none; }   /* hide it elsewhere */
 }
 
